@@ -1,79 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <link href="./src/output.css" rel="stylesheet">
-    <title>Conclusions et Interprétations</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analyse YouTube | Rapport de Projet</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/forms"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    header {
+        color: gray;
+        background: url("image_visualization/bg_data.jpg");
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
-<body class="m-5 text-xl">
-    <h1 class="text-center text-5xl text-yellow-500 font-bold">Analyse de Données sur les Vidéos YouTube les Plus Populaires</h1>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+  <header class="py-10 shadow-md">
+    <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 px-4">
+      Analyse des Vidéos YouTube les Plus Populaires
+    </h1>
+  </header>
 
+  <main class="max-w-4xl mx-auto py-12 px-6 space-y-16">
+    <!-- SECTION 1 -->
+    <section class="reveal">
+      <h2 class="text-2xl font-semibold text-yellow-600 mb-4">1. La distribution des vues</h2>
+      <p class="mb-4">Beaucoup considèrent qu'une vidéo est populaire simplement car elle a été vue. Mais que signifie vraiment être populaire sur YouTube ?</p>
+      <img src="image_visualization/hist.png" alt="Histogramme - Distribution des vues" class="rounded-xl shadow-md mx-auto mb-4">
+      <p>Les vidéos qui franchissent le million de vues rapidement peuvent être considérées comme populaires. Peu parviennent à aller au-delà, ce qui montre que le seuil du million reste un repère symbolique.</p>
+    </section>
 
-    <ol class="list-decimal m-5 ">
-        <li class="">
-            <h2 class="">La distribution des vues</h2>
-            <p>
-                Chacun d'entre nous à déja eu à parler d'une vidéo Youtube et d'affirmer qu'elle
-                est très populaire. Mais à quelle condition une vidéo Youtube peut-elle être considérée de
-                populaire.
-            </p>
-            <img src="image_visualization/hist.png" alt="histogramme montrant la distribution des vues">
-            <p>
-                Ici, nous voyons bien que les vidéos Youtube les plus populaires atteignent facilement
-                le million de vues, mais peu d'entre elles arrivent à le dépasser.
-                En général, une vidéo Youtube serait considéré comme étant populaire
-                si elle arrive à atteindre ce million de vues dans un laps de temps plus ou moins court. Plus vite,
-                elle dépasse cette limite plus, elle monte en popularité.
-            </p>
-        </li>
-        <li>
-            <h2>Les vidéos les plus populaires</h2>
-            <p>
-                Maintenant que nous en savons plus sur la condition nécessaire pour considérer une vidéo Youtube de
-                populaire, Quelles sont les vidéos les plus populaires d'après notre analyse ?
-            </p>
-            <img src="image_visualization/visioned.png" alt="Diagramme à barres montrant les 10 vidéos les plus populaires">
-            <p>
-                Le clip "Old Town Road" de Lil Nas X se retrouve en tête de ce classement même si le nombre de vues semble nous montrer le contraire. On voit donc bien que le nombre
-                de vues seul ne suffit pas à rendre une vidéo populaire. Il existe ainsi d'autres facteurs pour déterminer la popularité ou non
-                d'une vidéo Youtube.
-            </p>
-        </li>
-        <li>
-            <h2>Le nombre de vues par catégorie</h2>
-            <img src="image_visualization/boxplot.png" alt="Boxplot montrant le nombre de vues par catégorie">
-            <p>
-                La catégorie "Music" est en tête de classement avec plus de 16 milliards de vidéos visionnées. Très loin derrière,
-                on retrouve la catégorie "People & Blogs" avec 4,8 milliards de vidéos visionnées et en 3<sup>e</sup> position la catégorie "Entertainment"
-                avec 1,2 milliard de vidéos visionnées. En gros, la musique est au cœur de la plateforme Youtube.
-            </p>
-        </li>
-        <li>
-            <h2>Quelle relation existe-t-il entre le nombre de vues et le nombre de likes ?</h2>
-            <img src="image_visualization/scatter.png" alt="Nuage de point montrant la relation entre le nombre de vues et le nombre de likes">
-            <p>
-                La répartition des points montre bien l'existence d'une relation entre nos deux variables. Plus le nombre de vues
-                d'une vidéo est élevé plus le nombre de likes l'est également. Nous pouvons illustrer cela plus en détaille avec la droite de
-                régression linéaire obtenu à partir de ce nuage de point.
-            </p>
-            <img src="image_visualization/regLinear.png" alt="Nuage de point avec la droite de régression linéaire">
-            <p>
-                La droite de regression linéaire est strictement croissante et d'après calculs le coéfficent de corrélation valant <strong>0.928</strong> (voir ./notebooks/03_statistics.ipynb)
-                on peut déduire que nos deux variables sont fortement et positivement corrélées.
-            </p>
-        </li>
-        <li>
-            <h2>L'Année d'Or de Youtube</h2>
-            <p>
-                Nous allons pour finir, répondre à la question suivante : En quelle année la plateforme
-                a obtenu le plus de vidéos streamées toutes catégories confondus.
-            </p>
-            <img src="./image_visualization/bar2.png" alt="Barplot montrant le nombre de vidéos populaires streamées par année de publication">
-            <p>
-                Il s'agit donc de l'année 2024, avec 288 vidéos populaires streamées.
-                On pourrait également déduire que les vidéos les plus récentes sont en effet plus populaires que les vidéos les plus anciennes et cela serait parfaitement logique.
-            </p>
-        </li>
-    </ol>
+    <!-- SECTION 2 -->
+    <section class="reveal">
+      <h2 class="text-2xl font-semibold text-yellow-600 mb-4">2. Les vidéos les plus populaires</h2>
+      <p class="mb-4">Quelles vidéos ressortent comme les plus emblématiques en termes de popularité ?</p>
+      <img src="image_visualization/visionned.png" alt="Top 10 des vidéos les plus populaires" class="rounded-xl shadow-md mx-auto mb-4">
+      <p>Le clip "Old Town Road" arrive en tête, même si d'autres vidéos ont plus de vues. Cela souligne que la popularité ne se résume pas aux chiffres bruts, mais intègre aussi l'impact culturel.</p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="reveal">
+      <h2 class="text-2xl font-semibold text-yellow-600 mb-4">3. Le nombre de vues par catégorie</h2>
+      <img src="image_visualization/boxplot.png" alt="Boxplot des vues par catégorie" class="rounded-xl shadow-md mx-auto mb-4">
+      <p>La musique domine la plateforme avec un volume de vues impressionnant. Les catégories "People & Blogs" et "Entertainment" suivent, confirmant la forte présence de contenu de divertissement.</p>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="reveal">
+      <h2 class="text-2xl font-semibold text-yellow-600 mb-4">4. Corrélation entre vues et likes</h2>
+      <img src="image_visualization/scatter.png" alt="Nuage de points - vues vs likes" class="rounded-xl shadow-md mx-auto mb-4">
+      <p>On observe une relation directe entre vues et likes : plus une vidéo est vue, plus elle est aimée.</p>
+      <img src="image_visualization/regLinear.png" alt="Nuage de points avec régression linéaire" class="rounded-xl shadow-md mx-auto mt-4 mb-4">
+      <p>Avec un coefficient de corrélation de <strong>0.928</strong>, on peut conclure à une corrélation très forte et positive entre les deux variables.</p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section class="reveal">
+      <h2 class="text-2xl font-semibold text-yellow-600 mb-4">5. L'Année d'Or de YouTube</h2>
+      <p class="mb-4">Quelle année a révélé le plus grand nombre de vidéos populaires ?</p>
+      <img src="image_visualization/bar2.png" alt="Barplot vidéos populaires par année" class="rounded-xl shadow-md mx-auto mb-4">
+      <p>2024 a été l'année la plus prolifique avec 288 vidéos populaires. Ce résultat souligne la tendance croissante de popularité des vidéos récentes.</p>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-8 border-t">
+    © 2025 - Analyse de données sur YouTube par Harold Chanwin.
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.reveal', {
+      delay: 100,
+      distance: '40px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      reset: false
+    });
+  </script>
 </body>
 </html>
